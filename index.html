@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark/Light Mode</title>
+    <style>
+        .m-img {
+            height: 60px;
+            margin: 20px ;
+            padding: 20px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .active {
+            border: 4px solid rgb(229, 91, 91);
+            border-radius: 10px;
+        }
+
+        .light-theme{
+            background-color: white;
+            color: black;
+        }
+
+        .dark-theme{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div>
+        <img class="m-img" src="day-mode.png" alt="sun-img" id="img-light" onclick="LightMode()"/>
+        <img class="m-img" src="night-mode.png" alt="moon-img" id="img-dark" onclick="DarkMode()"/>
+
+        <h1>This is Light/Dark Mode Theme Changer</h1>
+    </div>
+
+
+
+
+    <script>
+
+        function LightMode(){
+
+            const imgLight = document.getElementById('img-light');
+            imgLight.classList.add('active');
+
+            const imgDark = document.getElementById('img-dark');
+            imgDark.classList.remove('active');
+
+            const bodyElement = document.getElementById('body');
+            bodyElement.className = 'light-theme';
+
+        }
+
+        function DarkMode(){
+
+            const imgLight = document.getElementById('img-light');
+            imgLight.classList.remove('active');
+
+            const imgDark = document.getElementById('img-dark');
+            imgDark.classList.add('active');
+
+            const bodyElement = document.getElementById('body');
+            bodyElement.className = 'dark-theme';
+        }
+
+    </script>
+</body>
+
+</html>
