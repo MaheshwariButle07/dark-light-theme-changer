@@ -14,6 +14,16 @@
             cursor: pointer;
         }
 
+        h1{
+            text-align: center;
+        }
+
+        p{
+            font-size: 24px;
+            word-spacing: 2px;
+            text-align: center;
+        }
+
         .active {
             border: 4px solid rgb(229, 91, 91);
             border-radius: 10px;
@@ -28,6 +38,14 @@
             background-color: black;
             color: white;
         }
+
+        @media screen and (max-width:400px) {
+
+            .m-img{
+               margin: auto;
+            }
+            
+        }
     </style>
 </head>
 
@@ -37,6 +55,11 @@
         <img class="m-img" src="night-mode.png" alt="moon-img" id="img-dark" onclick="DarkMode()"/>
 
         <h1>This is Light/Dark Mode Theme Changer</h1>
+        <p>
+            
+            Dark Mode is Used to Protect Your eyes from the bright light of Light Mode. Light Mode have font color black but screen color white which is not sutible for our eyes at night , this light can lead several damage to eyes so to protect our eys there is Dark Mode available in every device like Phone, Tablet, PC, Laptop, ETC.
+        
+        </p>
     </div>
 
 
